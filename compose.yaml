@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  cepfinder:
+    build: .
+    container_name: cepfinder
+    command: -cep=${CEP:-01153000}
