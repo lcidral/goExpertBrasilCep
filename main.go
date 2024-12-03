@@ -97,7 +97,6 @@ func buscaViaCep(cep string, result chan<- apiResult) {
 	resp, err := http.Get(url)
 	if err != nil {
 		result <- apiResult{Endereco{}, VIA_CEP, err}
-		result <- apiResult{Endereco{}, VIA_CEP, err}
 		return
 	}
 	defer resp.Body.Close()
